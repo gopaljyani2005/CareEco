@@ -1,0 +1,55 @@
+.adminpage {
+  padding: 20px;
+  text-align: center;
+  display: block;
+  margin-top: 3cm;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row; /* Changed from column to row */
+  gap: 15px;
+  justify-content: center; /* Center align horizontally */
+  margin-top: 30px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.btn button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 250px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn button:active {
+  background-color: #004085;
+  transform: translateY(1px);
+}
+
+.btn button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+@media (max-width: 600px) {
+  .btn {
+      flex-direction: column; /* Switch back to column on small screens */
+      width: 100%;
+  }
+
+  .btn button {
+      width: 80%;
+  }
+}

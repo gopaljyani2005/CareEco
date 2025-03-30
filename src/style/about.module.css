@@ -1,0 +1,29 @@
+.container {
+    margin-top: 8%;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+.title {
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.subtitle {
+    color: #333;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+.paragraph {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+.list {
+    list-style-type: square;
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+.listItem {
+    margin: 0.5rem 0;
+}
