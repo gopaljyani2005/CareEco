@@ -1,4 +1,5 @@
 "use client";
+import "./globals.css";
 import Image from "next/image";
 import styles from "../style/front.module.css";
 

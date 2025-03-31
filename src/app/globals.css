@@ -1,0 +1,23 @@
+:root {
+    --primary-color: #1230dc;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: rgb(58, 44, 188);
+}
+
+.header {
+    color: var(--secondary-color);
+}
+
+.success-text {
+    color: var(--success-color);
+}
+
+.danger-text {
+    color: var(--danger-color);
+}
