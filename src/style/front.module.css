@@ -9,11 +9,6 @@
     background-color: #f4f4f4;
 }
 
-:global(h1) {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
 .buttonGroup button {
     padding: 10px 20px;
     margin: 5px;
