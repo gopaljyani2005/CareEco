@@ -1,7 +1,7 @@
 "use client";
 import Router from 'next/navigation';
 import styles from "../../style/registration.module.css";
-import Router from "next/navigation";
+import { useState } from 'react';
 
 export default function sigin(){
     const router = Router.useRouter();
@@ -39,7 +39,7 @@ export default function sigin(){
 
         <label htmlFor="username">Username</label>
         <input
-          type="username"
+          type="text"
           id="username"
           name="username"
           placeholder="jyani123"
