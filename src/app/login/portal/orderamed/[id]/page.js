@@ -10,8 +10,15 @@ export default async function amed({params}){
     return(
         <main>
             <h1>Loading......</h1>
-            <h1>Successfullly Amed This Order/cancelled This Order</h1>
-            <Link href={"./"}>Home</Link>
+            <h1 style={styles.amed}>Successfully Amended This Order</h1>
+            <Link href={"./"} style={styles.amed}>Amend Section</Link>
         </main>
     )
 }
+
+
+const styles = {
+    amed: {
+        color: 'white',
+    },
+};

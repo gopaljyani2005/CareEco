@@ -37,7 +37,7 @@ export async function POST(request){
 
 
     if (findOrderResultsum[0].totalsell < quantity){
-        return NextResponse.json({ message: "Insufficient stock to shell"}, {status: 400});
+        return NextResponse.json({ message: "Insufficient stock to sell"}, {status: 400});
     }
     else{
         for(let i=0; (i<findOrderResult.length) && remainingQtytotal; i++){

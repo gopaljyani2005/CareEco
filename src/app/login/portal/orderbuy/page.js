@@ -7,7 +7,6 @@ export default function SignIn() {
     const router = useRouter();
     const [stockName, setStockName] = useState("");
     const [quantity, setQuantity] = useState(5);
-    const [ordertype, setOrderType] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -15,7 +14,7 @@ export default function SignIn() {
         const data = {
             stockName: stockName,
             quantity: quantity,  
-            ordertype: ordertype
+            ordertype: "buy"
         };
 
         const result = await fetch(`/api/placeorder`, {
@@ -38,7 +37,7 @@ export default function SignIn() {
     return (
         <div className={styles.container}>
             <form className={styles.form} onSubmit={handleSubmit}>
-                <h1 style={{ color: 'blue' }}>Order Place Portal</h1>
+                <h1 style={{ color: 'blue' }}>Stock Buy Portal</h1>
 
                 <label htmlFor="stockName">Stock Name</label>
                 <input
@@ -60,17 +59,6 @@ export default function SignIn() {
                     required
                     value={quantity}
                     onChange={(e) => setQuantity(e.target.value)}
-                />
-
-                <label htmlFor="ordertype">Order Type</label>
-                <input
-                    type="text"
-                    id="ordertype"
-                    name="ordertype"
-                    placeholder="buy/sell"
-                    required
-                    value={ordertype}
-                    onChange={(e) => setOrderType(e.target.value)}
                 />
 
 

@@ -37,7 +37,7 @@ export default function UserDetail() {
   return (
     <main>
         <h1>Jai Shree Ram</h1>
-        <h1>Stock Market Detail of {result1.username}</h1>
+        <h1 className="username">Portfolio of {result1.username}</h1>
       <div className="ud">
         <table className="table">
           <thead>
