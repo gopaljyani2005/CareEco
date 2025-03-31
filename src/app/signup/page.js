@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
-import Router from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import styles from "../../style/registration.module.css";
 
-export default function sigin() {
-    const router = Router.useRouter();
+export default function Sigin() {
+    const router = useRouter();
     const [username, setusername] = useState("");
     const [useremail, setuseremail] = useState("");
     const [confirmpassword, setconfirmpassword] = useState("");
@@ -19,32 +19,34 @@ export default function sigin() {
             return;
         }
 
-        
-
         const data = {
-          username: username,
-          userpassword: userpassword,
-          useremail: useremail,
-          phoneNumber:userphoneNumber,
-          useracNumber:useracNumber,
-          userbalance : 0
+            username: username,
+            userpassword: userpassword,
+            useremail: useremail,
+            phoneNumber: userphoneNumber,
+            useracNumber: useracNumber,
+            userbalance: 0
         };
 
-        const result = await fetch(`/api/signup`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
+        try {
+            const result = await fetch(`/api/signup`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
 
-        if (result.status === 200) {
-            router.push('/login');
+            if (result.status === 200) {
+                router.push('/login');
+            } else {
+                alert("User is already registered with this username");
+                router.push('/');
+            }
+        } catch (error) {
+            alert("An error occurred during registration.");
+            console.error(error);
         }
-        else{
-          alert("user is already registered with this username");
-          router.push('./');
-      }
     }
 
     return (
