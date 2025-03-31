@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import Router from 'next/navigation';
 import styles from "../../style/registration.module.css";
 
 export default function sigin() {
-    const router = useRouter();
+    const router = Router.useRouter();
     const [username, setusername] = useState("");
     const [useremail, setuseremail] = useState("");
     const [confirmpassword, setconfirmpassword] = useState("");
