@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react"
+import Router from 'next/navigation';
 import styles from "../../style/registration.module.css";
 import Router from "next/navigation";
 
